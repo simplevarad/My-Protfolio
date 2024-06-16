@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 5rem auto 2rem;
+      padding: 1rem;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .home {
+      text-align: center;
+    }
+
+    .home img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .home h2 {
+      margin-top: 0;
+    }
+
+    .about, .skills, .projects {
+      margin-top: 2rem;
+    }
+
+    .skills ul, .projects ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li, .projects li {
+      margin: 0.5rem 0;
+    }
+
+    .skills li::before {
+      content: '•';
+      color: #333;
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+        <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+        <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <section id="home" class="section home active">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Hi! I'm Varad Vanjare, a new graduate with a passion for data analytics and web development.</p>
+    </section>
+
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <p>I have a background in computer science with a Bachelor's degree from V.K Krishna Menon College, Mumbai. I've been recognized for my expertise in data analytics and visualization, achieving first place in a working model competition. I am equipped with strong skills in planning, time management, teamwork, leadership, and design controls.</p>
+      <p>Education: Bachelor of Science (B.Sc.) - Computer Science from V.K Krishna Menon College, Mumbai (2021 - 2024)</p>
+      <p>Professional Experience: Currently, I am a fresher and doing an internship at Prodigy Infotech in Web Development.</p>
+    </section>
+
+    <section id="skills" class="section skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Data Analytics and Visualization: Power BI, Tableau, Python, SQL</li>
+        <li>Programming / Web Languages: Python, JavaScript, HTML, CSS</li>
+        <li>Back-end Technologies: MySQL, AWS</li>
+        <li>Frameworks, Tools, and Libraries: Pandas, NumPy, Matplotlib, Sklearn, Git, NLP, Flutter, MS Excel, Word</li>
+        <li>Operating Systems: Mac OS, Windows, Ubuntu</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>FaceClick - Facial Attendance System (Python, OpenCV): Created an innovative facial attendance system automating attendance tracking for organizations.</li>
+        <li>InvoiceHub - Invoice Management Website (PHP, MySQL, HTML, CSS, JavaScript): Developed a platform to streamline invoice management for businesses.</li>
+        <li>Amazon Sales Analysis Dashboard (Power BI): Conducted analysis to identify sales trends and insights, using data cleaning, transformation, and visualization.</li>
+        <li>Financial Analytics Dashboard (Power BI): Developed a dashboard to monitor and analyze financial performance indicators with interactive elements.</li>
+      </ul>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2024 Varad Vanjare</p>
+    <p>Contact: <a href="mailto:varadvanjare6768@gmail.com">varadvanjare6768@gmail.com</a> | <a href="https://www.linkedin.com/in/varad-vanjare-0358b8263/">LinkedIn</a> | <a href="https://github.com/simplevarad">GitHub</a></p>
+  </footer>
+  <script>
+    function showSection(id) {
+      var sections = document.querySelectorAll('.section');
+      sections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
